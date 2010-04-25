@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * VIEW RESOLVER * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	*
+	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+
+   	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * MAPPING CONTROLLER * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	*
+	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+	<bean id="mappingSpecifique" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="order"><value>0</value></property>
+		<property name="mappings">
+			<props>			
+				<prop key="/pages/listUsers.do">listUsersController</prop>
+				<prop key="/pages/saveUser.do">saveUserController</prop>		
+			</props>
+		</property>
+	</bean>
+
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * DEFINITION DES CONTROLLERS * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	*  Definir ici vos controllers ex :
+	*	<bean id="contactCommercialController"
+	*	class="com.smatis.siteweb.controller.ContactController">
+	*	<property name="contactService"><ref bean="contactService"/></property>
+	*	<property name="sessionForm"><value>true</value></property>
+	*	<property name="formView"><value>contacts/commercial/formulaireContactCommercial</value></property>
+	*	<property name="successView"><value>contacts/commercial/formulaireContactCommercialSucces</value></property>
+	*	<property name="commandName"><value>contact</value></property>
+	*	<property name="commandClass"><value>com.smatis.siteweb.modele.contacts.ContactCommercial</value></property>
+	*	<property name="validator"><ref bean="contactValidator" /></property>
+	*	</bean>
+	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+	<bean id="listUsersController" class="fr.mumumu.client.spring.mvc.controller.ListUsersController" autowire="byName"/>
+	<bean id="saveUserController" class="fr.mumumu.client.spring.mvc.controller.SaveUserController" autowire="byName">
+		<property name="formView">
+			<value>/pages/user_form</value>
+		</property>
+		<property name="successView">
+			<value>/index</value>
+		</property>
+		<property name="cancelView">
+			<value>/index</value>
+		</property>
+		<property name="commandName">
+			<value>userCommand</value>
+		</property>
+		<property name="commandClass">
+			<value>fr.mumumu.client.spring.mvc.command.UserCommand</value>
+		</property>
+		<property name="validator">
+			<ref bean="userValidator" />
+		</property>
+	</bean>
+
+
+   	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * VALIDATOR * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	* Definir ici les validators ex :
+	* 	<bean id="identificationValidator" class="com.smatis.siteweb.validator.IdentificationValidator" />	
+	* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+	<bean id="userValidator" class="fr.mumumu.client.spring.mvc.validator.UserValidator" />
+
+</beans>

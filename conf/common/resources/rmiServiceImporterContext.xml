@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  ACCES SERVICE EXTERNE COMMUN * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    *
+	*	<bean id="visitesService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+	*		<property name="serviceUrl" value="rmi://localhost:1099/smatis-site-web/visitesService"/>
+	*		<property name="serviceInterface" value="com.smatis.siteweb.service.interfaces.VisitesService"/>
+	*		<property name="refreshStubOnConnectFailure" value="true"/>
+	*	    <property name="lookupStubOnStartup" value="false"/>
+	*		
+	*		<property name="remoteInvocationFactory" ref="gestcomRemoteInvocationFactory"/>
+	*
+	*  </bean>
+	*
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+	<!-- Mettre ici l'import des services specifique à l'environement de dev/prod/prod-test -->
+
+</beans>

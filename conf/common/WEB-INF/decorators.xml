@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * DECORATEURS SITEMESH * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+
+<decorators defaultdir="/decorateurs">
+
+   <decorator name="main" page="decorateur_sample.jsp">
+		<pattern>/*</pattern>
+   </decorator>
+
+</decorators>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  DOZER  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    *
+    * - Dozer est un framework de mapping objet (recurcive, bidirectionelle...) vous pouvez utiliser le framework pour vos "mapping" d'objet celui-ci gére beaucoup
+    *   de chose implicitement pour des besoins plus spécifiques utiliser le fichier dozer-bean-mappings.xml et la documentation sur le site  http://dozer.sourceforge.net
+	* 
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+   	<!-- Configuration Dozer ne pas editer la structure du bean -->	
+	<bean id="mapperDozerBean" class="org.scub.foundation.framework.base.mapping.util.MapperDozerFactoryBean">
+		  <property name="mappingFiles">
+		    <list>		  
+		      <value>dozer-bean-mappings.xml</value>
+		    </list>
+		  </property>
+	</bean>
+	
+</beans>

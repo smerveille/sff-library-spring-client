@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+   
+   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  ACCES SERVICE EXTERNE COMMUN * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    *
+	*<bean id="messageService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+	*		<property name="serviceUrl" value="rmi://localhost:1099/scub-foundation-example-core/messageService"/>
+	*		<property name="serviceInterface" value="org.scub.foundation.example.core.service.interfaces.MessageService"/>
+	*		<property name="refreshStubOnConnectFailure" value="true"/>
+	*	    <property name="lookupStubOnStartup" value="false"/>			
+	*		<property name="remoteInvocationFactory" ref="exampleCoreRemoteInvocationFactory"/>
+	*</bean>
+	*
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+</beans>
