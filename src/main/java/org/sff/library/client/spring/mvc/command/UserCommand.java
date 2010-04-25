@@ -1,4 +1,4 @@
-package fr.mumumu.client.spring.mvc.command;
+package org.sff.library.client.spring.mvc.command;
 
 import java.io.Serializable;
 

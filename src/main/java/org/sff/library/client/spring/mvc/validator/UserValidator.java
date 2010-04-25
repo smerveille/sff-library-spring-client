@@ -1,10 +1,10 @@
-package fr.mumumu.client.spring.mvc.validator;
+package org.sff.library.client.spring.mvc.validator;
 
+import org.sff.library.client.spring.mvc.command.UserCommand;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import fr.mumumu.client.spring.mvc.command.UserCommand;
 
 public class UserValidator implements Validator {
 

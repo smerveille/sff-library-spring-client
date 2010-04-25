@@ -1,14 +1,14 @@
-package fr.mumumu.client.spring.mvc.controller;
+package org.sff.library.client.spring.mvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.scub.foundation.framework.base.mapping.util.MapperDozerBean;
+import org.sff.library.client.spring.mvc.command.UserCommand;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.CancellableFormController;
 
-import fr.mumumu.client.spring.mvc.command.UserCommand;
 import fr.mumumu.core.dto.UserDto;
 import fr.mumumu.core.service.interfaces.UserService;
 

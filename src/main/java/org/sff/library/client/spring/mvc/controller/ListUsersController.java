@@ -1,4 +1,4 @@
-package fr.mumumu.client.spring.mvc.controller;
+package org.sff.library.client.spring.mvc.controller;
 
 import java.util.List;
 

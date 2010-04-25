@@ -1,7 +1,7 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>scub-foundation.demo.mumumu</groupId>
-  <artifactId>mumumu.client.spring-mvc</artifactId>
+  <groupId>sff.library</groupId>
+  <artifactId>library-client-spring-mvc</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
 
@@ -16,14 +16,12 @@
    		<directory>target</directory>
 	   	<sourceDirectory>src/main/java</sourceDirectory>
 	    <outputDirectory>target/classes</outputDirectory>
-   
-   
    </build>    
    
    <dependencies>
 		<dependency>
-			<groupId>scub-foundation.demo.mumumu</groupId>
-			<artifactId>mumumu-core-model</artifactId>
+			<groupId>sff.library</groupId>
+			<artifactId>library-core-model</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>jar</type>
 			<scope>compile</scope>
